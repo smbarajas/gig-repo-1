@@ -17,16 +17,15 @@
 */
 define('BASEPATH', "placeholder");
 
-include_once('../application/config/development/database.php');
+include_once('../application/config/database.php');
 
-function parseToXML($htmlStr)
-{
-$xmlStr=str_replace('<','&lt;',$htmlStr);
-$xmlStr=str_replace('>','&gt;',$xmlStr);
-$xmlStr=str_replace('"','&quot;',$xmlStr);
-$xmlStr=str_replace("'",'&#39;',$xmlStr);
-$xmlStr=str_replace("&",'&amp;',$xmlStr);
-return $xmlStr;
+function parseToXML($htmlStr){
+    $xmlStr=str_replace('<','&lt;',$htmlStr);
+    $xmlStr=str_replace('>','&gt;',$xmlStr);
+    $xmlStr=str_replace('"','&quot;',$xmlStr);
+    $xmlStr=str_replace("'",'&#39;',$xmlStr);
+    $xmlStr=str_replace("&",'&amp;',$xmlStr);
+    return $xmlStr;
 }
 
 //mysqli object
@@ -34,12 +33,12 @@ $db=$db['default'];
 $mysqli = new mysqli($db['hostname'], $db['username'], $db['password'], $db['database']);
 
 /* check connection */
-if ($mysqli->connect_errno) {
+if ($mysqli->connect_error) {
     printf("Connect failed: %s\n", $mysqli->connect_error);
     exit();
 }
 
-//join tables
+//inner join tables markers annd venue by VenueKey
 $query = "SELECT * FROM Markers m, Venue v WHERE m.VenueKey = v.VenueKey";
 
 /* Select queries return a resultset */
