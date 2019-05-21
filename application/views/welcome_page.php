@@ -143,10 +143,10 @@ $this->load->view($this->config->item('theme') . 'header');
     var xml = data.responseXML;
     var markers = xml.documentElement.getElementsByTagName("marker");
     Array.prototype.forEach.call(markers, function(markerElem) {
-         var name = 			markerElem.getAttribute('name');
+         var name = markerElem.getAttribute('name');
          var address = markerElem.getAttribute('address');
          var type = markerElem.getAttribute('type');    
-	    var point = new google.maps.LatLng(
+	     var point = new google.maps.LatLng(
                   parseFloat(markerElem.getAttribute('lat')),
                   parseFloat(markerElem.getAttribute('lng')));
 	    

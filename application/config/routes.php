@@ -67,6 +67,7 @@ $route['admin/login'] = 'admin/login';
 $route['admin/logout'] = 'admin/logout';
 $route['admin/reset'] = 'admin/requestReset';
 $route['admin/resetpassword'] = 'admin/resetPassword';
+
 //gig routes
 $route['gig'] = 'gig/index';
 $route['gig/add'] = 'gig/add';
@@ -87,6 +88,7 @@ $route['venues/(:any)'] = 'venues/view/$1';
 $route['customer'] = 'customer';
 $route['customers'] = 'customer';
 $route['startups'] = 'startups';
+
 //profiles route
 $route['profile/add'] = 'profile/add';
 $route['profiles/add'] = 'profile/add';
