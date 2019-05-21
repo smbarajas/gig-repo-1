@@ -56,7 +56,7 @@ if ($result = $mysqli->query($query)) {
 	//{
 	  // ADD TO XML DOCUMENT NODE
 	  echo '<marker ';
-      echo 'name="' . parseToXML($row['VenueName']) . '" ';
+	  echo 'name="' . parseToXML($row['VenueName']) . '" ';
 	  echo 'address="' . parseToXML($row['VenueAddress']) . '" ';
 	  echo 'lat="' . $row['lat'] . '" ';
 	  echo 'lng="' . $row['lng'] . '" ';
@@ -73,9 +73,12 @@ if ($result = $mysqli->query($query)) {
     /* free result set */
     $result->close();
 
-} else {
-    die('Not connected : ' . mysqli_connect_error() . PHP_EOL);
-    exit;
+}
+
+else
+{
+  die('Not connected : ' . mysqli_connect_error() . PHP_EOL);
+	exit;
 }
 
 ?>
