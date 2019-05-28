@@ -58,6 +58,14 @@ class Gig extends CI_Controller
     public function index()
     {//begin function index
         $data['gigs'] = $this->gig_model->getGigs();
+		
+		/**
+		*  data['companyCities'] and data['names'] store values to be displayed 
+		*  in dropdown list of Find a Gig page(../views/gigs/index.php in this case).
+		*/
+		$data['companyCities'] = $this->gig_model->getGigsInfoForFilter($filterType = 'companyCities');
+		$data['names'] = $this->gig_model->getGigsInfoForFilter($filterType = 'names');
+		
         $data['title']= 'Gigs';
 
         $this->load->view('gigs/index', $data);
