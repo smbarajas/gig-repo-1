@@ -79,6 +79,30 @@ class Gig_model extends CI_Model {
         return $query->row_array();
     }#end getGigs()
 
+	/**
+	*  Retreive a list of data for dropdown lists on Find a Gig page from the DB.
+	*  Use SQL DISTINCT keyword to retrieve unique values for Type of Job and City dropdown list,
+	*  and send to view page (../views/gigs/index.php in this case).
+	*
+	*  @param  $filterType  name for dropdown list on Find a Gig page
+	*
+	*  @return an array of a list of company cities, or names to be displayed in dropdown list 
+	*  in Find a Gig page.
+	*/	
+    public function getGigsInfoForFilter($filterType)
+    {   
+		if ($filterType === 'companyCities') {
+			$this->db->select('DISTINCT(CompanyCity)');	
+			$this->db->from('Company');
+		} elseif ($filterType === 'names') {
+			$this->db->select('DISTINCT(Name)');
+			$this->db->from('Company');
+		}
+					
+		$query = $this->db->get();	
+		return $query->result_array();
+    }#end getGigsInfoForFilter()
+	
     /**
      * Add a new gig to the DB using POST parameters.
      *

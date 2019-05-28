@@ -37,6 +37,7 @@
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 5px;
 }
 
 .container .btn:hover {
@@ -50,10 +51,10 @@
  label {
 	position: relative;
 	display: block;
-	padding: 0 0 0 1em;
+	padding: 0 2em 0 .5em;
 	background: #16a085;
 	font-weight: bold;
-	line-height: 3;
+	line-height: 2.5em;
 	cursor: pointer;
   }
 
@@ -86,3 +87,13 @@
  input:checked ~ .tab-content {
 	max-height: 15em;
   }
+
+@media (max-width: 425px) {
+	.g-recaptcha{
+		transform:scale(0.77);
+		-webkit-transform:scale(0.77);
+		transform-origin:0 0;
+		-webkit-transform-origin:0 0;
+		margin: 0;
+	}
+}
