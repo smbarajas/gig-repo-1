@@ -51,10 +51,11 @@
         <h2>Filter</h2>
         <form role="filter" method="post" action="gig/filter">
         <div class="form-group">
+        <button type="submit" class="btn btn-primary">Go</button>
         <label>Type of Job: </label>
           <select name="GigOutline">
-            <?php foreach ($gigs as $gig): ?>
-              <option value="<?=$gig['GigOutline']?>"><?=$gig['GigOutline']?></option>
+            <?php foreach ($gigOutlines as $gigOutline): ?>
+              <option value="<?=$gigOutline['GigOutline']?>"><?=$gigOutline['GigOutline'];?></option>
             <?php endforeach ?>
             </select>        
             </div>

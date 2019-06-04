@@ -65,7 +65,7 @@ class Gig extends CI_Controller
 		*/
 		$data['companyCities'] = $this->gig_model->getGigsInfoForFilter($filterType = 'companyCities');
 		$data['names'] = $this->gig_model->getGigsInfoForFilter($filterType = 'names');
-		
+		$data['gigOutlines'] = $this->gig_model->getGigsInfoForFilter($filterType = 'gigOutlines');
         $data['title']= 'Gigs';
 
         $this->load->view('gigs/index', $data);

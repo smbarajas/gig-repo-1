@@ -97,6 +97,9 @@ class Gig_model extends CI_Model {
 		} elseif ($filterType === 'names') {
 			$this->db->select('DISTINCT(Name)');
 			$this->db->from('Company');
+		} elseif ($filterType === 'gigOutlines') {
+			$this->db->select('DISTINCT(GigOutline)');	
+			$this->db->from('Gigs');
 		}
 					
 		$query = $this->db->get();	
