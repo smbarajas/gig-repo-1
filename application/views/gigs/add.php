@@ -66,7 +66,7 @@
                         <?php echo '
                         <select class="form-control" id="CompanyState" name="CompanyState">
                             <option value="0">Select State</option>' . 
-                            makeDropdownSelect($this->config->item("stateSelect")) . ' 
+                            makeDropdownSelect($this->config->item('stateSelect')) . ' 
                         </select>'; ?>
                     </div>
                 </div>

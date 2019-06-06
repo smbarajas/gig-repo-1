@@ -181,8 +181,9 @@ if(!function_exists('makeDropdownSelect'))
     function makeDropdownSelect($option)
     {
         $myReturn = '';
+        //echo $this->config->item('style')
+        //echo $this->config->item('stateSelect');
         foreach ($option as $key => $value)
-        
         {            
             $myReturn .= '<option value="' . $key . '"' . set_select("CompanyState", "$key") . '>' . $value . '</option>' . PHP_EOL;
         }
