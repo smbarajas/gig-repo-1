@@ -30,12 +30,10 @@
 <h2 class="page-title">Gigs List</h2>
 
 <div class="container-fluid">
-    <!-- why is this here?
-    <h1>&nbsp;</h1>
-    -->
+
     <div class="row">
 
-        <!-- right column: search form and filter form -->
+        <!-- left column: search form and filter form -->
         <div class="col-sm-3 gig-search">
             <!-- gig search field -->
             <form role="search" method="post" action="gig/search">
@@ -83,9 +81,9 @@
 
             </form>
         </div><!-- .col-sm-6 -->
-        <!-- END right column: search form and filter form -->
+        <!-- END left column: search form and filter form -->
 
-        <!-- left column: lists all gigs -->
+        <!-- right column: lists all gigs -->
         <div class="col-sm-9 gig-list">
             <?php foreach ($gigs as $gig): ?>
                 <div class="gig-list-item">
@@ -96,6 +94,7 @@
                 </div>
             <?php endforeach ?>
         </div>
+        <!-- END right column: lists all gigs -->
 
     </div><!-- .row -->
 </div><!-- .container-fluid -->
