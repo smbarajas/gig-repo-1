@@ -1,4 +1,4 @@
-<?php
+?php
 /**
  *Welcome page for Gig Central
  *
@@ -67,6 +67,7 @@ $this->load->view($this->config->item('theme') . 'header');
 <div class="clear-both"></div>
 
 <!-- comments out non-mvp features for possible reintegration at later date
+  In conjunction with uncommenting these lines, please also reincorporate the css according to the instructions found in public/css/Inactive CSS/custom_styles_profile.css
 <!-- this is for the 'Profile Pictures section on the page' 
 <div class="profile-container">
 
