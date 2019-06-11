@@ -6,7 +6,7 @@
 * @package ITC 260 CodeIgnitor - Gig Central
 * @subpackage Gig Controller
 * @author Patricia Barker <patriciabethbarker@gmail.com>, Turner Tackitt <turner8193@gmail.com>, Spencer Echon
-* @author Mike Archambault <michael.archambault@seattlecentral.edu>
+* @author Mike Archambault <michael.archambault@seattlecentral.edu>, Esmeralda Barajas <smbarajas14@gmail.com>
 * @version 2.3 2018/08/19
 * @link http://www.tcbcommercialproperties.com/sandbox/codeignitor/
 * @license http://www.apache.org/licenses/LICENSE-2.0
@@ -248,9 +248,9 @@ class Gig_model extends CI_Model {
         return FALSE;
     }//end function SaveForm
 
-    public function filter_search($GigOutline, $CompanyCity){
+    public function filter_search($Name, $CompanyCity){
 
-       $conditions = array('GigOutline' => $GigOutline, 'CompanyCity' => $CompanyCity);
+       $conditions = array('Name' => $Name, 'CompanyCity' => $CompanyCity);
 
        $this->db->select('*');
        $this->db->from('Gigs');
