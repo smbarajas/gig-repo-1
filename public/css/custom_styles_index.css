@@ -13,31 +13,34 @@
  * @todo 
  */
 
+ /*
+* CSS should conform to the standards in the theme. 
+* (As of 2019/06/06, the theme used on the site is "Flatly" from bootswatch.)
+* 
+* Every effort should be made to maintain style consistency.
+* In order to avoid discrepencies, you should NOT make rules by "eye-balling" approximate colors, 
+* size, spacing, media querries, etc.
+* Rather, consult the style guide available at:
+* https://docs.google.com/document/d/19PxRlB8ITMTzURyw9CoRoStEzH7l2cnIPXP0MRPFNaI/edit
+*
+* Custom CSS should be used sparingly and with discretion.
+* If you are creating new style rules, you should include comments which AT MINIMUM contain :
+*       intended FILEPATHS (where it is called) and affected PAGES(URLs) where these styles are called
+*       brief explanation of the reason for deviating from the theme
+*
+* If your custom styles differ from the google-doc guide, please explain why in the comments, and
+* include a note on the google doc itself.
+*/
+
+/*creates a buffer between the body and the top-nav banner*/
 body{
     padding-top: 80px !important;
 }
 
-#gigs {
-    margin-top:100px;
-}
-
-.main-box-container{
-    overflow: visual;
-}
-
-.main-box{
-    float: left;
-    padding-bottom: 50%;
-    position: relative;
-}
-.list-group-item-text {
-    list-style-type:none;
-}
-.list-group-item{
-    display: block;
-    margin: 0 auto;
-}
-
+/*
+* inner-box and bar class styles apply to the "Find a Gig" and "Post a Gig" divs and content
+* found at the top of the welcome page
+*/
 .inner-box{
     padding: 1em;
     position: absolute;
@@ -53,14 +56,12 @@ body{
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
+
 .inner-box h1{
     font-size: 2em;
     margin-top: 15px;
 }
 
-.inner-box h3{
-    /* display: none; */
-}
 
 .bar{
     margin: 0 auto;
@@ -98,30 +99,16 @@ body{
     margin-top: 10px !important;
 }
 
-#recent-data{
-    background-color: #fff;
-    position: relative;
-    width:100%;
-}
-
-.panel-body ul{
-    list-style: none;
-}
-
-.panel-body li{
-    margin-bottom: 1em;
-}
-
 .clear-both{ 
     clear: both;
 }
 
-.column{
+/*.column{
     padding: 0 !important;
     position: relative;
     float: left;
     overflow: auto;
-}
+}*/
 
 .inner-column{
     margin: 5px;
@@ -133,152 +120,11 @@ body{
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
-.map-small{
-    width: 100%;
-    height: 300px;
+.inner-column h2 {
+    color: #1ABC9C;
 }
 
-.list{
-    list-style: none;
-    padding-left: 0px !important;
-}
-
-/* Home 2 Design */
-.panel-home{
-    margin: 0;
-    border-radius: 0;
-    border: none;
-    background-color: #fff;
-    overflow: auto;
-    /*padding: 20px 0;*/
-}
-
-.panel-home:nth-child(even){
-    background-color: #ecf0f1;;
-}
-
-.panel-home:nth-child(odd) > .panel-body > .panel-image{
-    float: left;
-}
-
-.panel-home:nth-child(even) > .panel-body > .panel-image{
-    float: right;
-}
-
-.panel-home-body{
-    padding: 0;
-    overflow: aut0;
-    height: 400px;
-    text-align: center;
-}
-
-.panel-image{
-    height:inherit;
-    background-color: rgba(67, 67, 67, 1);
-    width: 30%;
-    position:relative;
-}
-
-.panel-image::after{
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.3;
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    -ms-background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-    /* background-attachment: fixed; */
-}
-
-.panel-image:hover{
-    background-color: #fff;
-}
-
-.panel-image:hover .panel-image::after{
-    opacity: 1;
-}
-
-.panel-image h1{
-    z-index: 1;
-    font-size: 6em;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%);
-    text-shadow: 0px 0px 8px #666666;
-}
-
-
-.left{
-    float: left;
-}
-.right{
-    float: right;
-}
-.panel-contents{
-    float: left;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: left;
-    padding-bottom: 20px;
-    width:70%;
-}
-
-.panel-home-heading{
-    padding: 0;
-}
-.panel-home-title{
-}
-
-
-.panel-list{
-    padding-left: 0px;
-    list-style: none;
-}
-
-.panel-list li{
-    margin-bottom: 1.5em;
-}
-.panel-control{
-    clear: both;
-    text-align: center;
-}
-
-#pl-img-1::after{
-    background-image: url('http://gigcentral.kateleeseattle.com/img/panel-image-1.jpg');
-}
-
-#pl-img-2::after{
-    background-image: url('http://gigcentral.kateleeseattle.com/img/panel-image-2.jpg');
-}
-
-#pl-img-3::after{
-    background-image: url('http://gigcentral.kateleeseattle.com/img/panel-image-3.jpg');
-}
-
-#pl-img-4::after{
-    background-image: url('http://gigcentral.kateleeseattle.com/img/panel-image-4.jpg');
-}
-
-/** FAQ **/
-.faq .accordion-inner {
-    margin-left: 3%;
-}
-
-/** ADDITIONS **/
-
+/* for the titles of the job postings in the gigs list on the welcome page*/
 .inner-column h3 {
     font-weight: bold;
     display: flex;
@@ -286,38 +132,12 @@ body{
     align-items: center;
 }
 
+/* smaller size font for the date posted in association with the gigs list on the welcome page */
 .inner-column h3 span {
     font-size: 12px;
 }
+
+/* Removes unnessary line spacing caused by the bootswatch flatly theme*/
 p {
     margin: 0 0 5.5px;
-}
-
-.inner-column h2 {
-    color: #1ABC9C;
-}
-
-/* Profile Banner Things */
-
-.profile-btn {
-    position:absolute;
-    top:78%;
-    left:5%;
-}
-
-.profile-container {
-    position:relative;
-}
-
-.profile-pics {
-    border:1px solid black;
-    opacity:.6;
-    float:left;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-.profile-ctnr-rm-pad {
-    padding:0;
 }
