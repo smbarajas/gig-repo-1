@@ -34,6 +34,27 @@
 }
 /********** End Media Queries 580px ***********/
 
+/********** Media Queries 730px ***********/
+@media only screen and (max-width: 730px) {
+    
+.gig-search form {
+    margin-top: 0;
+    padding-top: 0;
+    max-width: 45%;
+    min-width: 235px;
+    float: right;
+    padding-right: 20px;
+    }
+    
+.gig-list {
+    border-left: none;
+    border-top: 2px solid #2c3e4f;
+    padding-top: 10px;
+    margin-top: 340px;
+    }    
+}
+/********** End Media Queries 730px ***********/
+
 /********** Media Queries 768px ***********/
 
 @media (min-width: 768px){

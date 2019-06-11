@@ -1,7 +1,7 @@
 /**
  * public/css/custom_styles.css
  *
- * css styles for forms
+ * css styles for forms and gig-listings
  *
  * @package GigCentral
  * @subpackage Home
@@ -20,6 +20,7 @@ h2 {
     padding-bottom:2rem;
 }
 
+/*application/libraries/recaptcha.php*/
 .text-xs-center {
         text-align: center;
 }
@@ -28,6 +29,7 @@ h2 {
     display: inline-block;
 }
 
+/*affects the nav bar in header.php-overwrites a bootswatch flatly style*/
 .navbar-brand {
     padding: 5px 15px 0 10px;
 }
@@ -36,7 +38,10 @@ input#userfile {
     height: auto;
 }
 
-/*-------FAQ Accordian CSS-------*/
+/*-------FAQ Accordian CSS-------
+**application/views/pages/faq.php
+*/
+
 .FAQ-wrapper {
 	margin: auto;
 	width: 75%;
@@ -48,7 +53,9 @@ input#userfile {
 	padding: 0 1em;
 }
 
-  /* Accordian styles */
+/* Accordian styles 
+**application/views/pages/faq.php
+*/
 .tab {
 	position: relative;
 	margin-bottom: 1px;
@@ -87,7 +94,9 @@ input#userfile {
 }
 
 
-/*-------GIG LIST STYLES-------*/
+/*-------GIG LIST STYLES-------
+** application/views/gigs/index.php
+*/
 .gig-search form {
     margin-top: 2rem;
 }
@@ -158,21 +167,5 @@ input#userfile {
 .gig-list-form .button-container{
     padding-top: 1rem;
 }
-@media only screen and (max-width: 730px) {
-    
-.gig-search form {
-    margin-top: 0;
-    padding-top: 0;
-    max-width: 45%;
-    min-width: 235px;
-    float: right;
-    padding-right: 20px;
-    }
-    
-.gig-list {
-    border-left: none;
-    border-top: 2px solid #2c3e4f;
-    padding-top: 10px;
-    margin-top: 340px;
-    }    
-}
+
+/*-------END GIG LIST STYLES-------*/
