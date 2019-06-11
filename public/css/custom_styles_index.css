@@ -2,6 +2,7 @@
  * public/css/custom_styles_index.css
  *
  * css style for home page
+ * application/views/welcome_page.php
  *
  * @package GigCentral
  * @subpackage Home
@@ -17,7 +18,7 @@ body{
     padding-top: 80px !important;
 }
 
-#gigs {
+#gigs {/*mothballed*/
     margin-top:100px;
 }
 
