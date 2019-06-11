@@ -2,6 +2,12 @@
 $this->load->view($this->config->item('theme').'header');
 ?>
 
+<style>
+  .faq-checkbox {
+  display: none;
+  }
+</style>
+
 <div class="FAQ-wrapper">
 	<h1>Gig FAQs</h1>
   	<div class="half">
