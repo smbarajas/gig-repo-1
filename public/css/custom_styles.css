@@ -12,6 +12,26 @@
  * @see application/view/themes/bootswatch/header.php
  * @todo none
  */
+
+/*
+* CSS should conform to the standards in the theme. 
+* (As of 2019/06/06, the theme used on the site is "Flatly" from bootswatch.)
+* 
+* Every effort should be made to maintain style consistency.
+* In order to avoid discrepencies, you should NOT make rules by "eye-balling" approximate colors, 
+* size, spacing, media querries, etc.
+* Rather, consult the style guide available at:
+* https://docs.google.com/document/d/19PxRlB8ITMTzURyw9CoRoStEzH7l2cnIPXP0MRPFNaI/edit
+*
+* Custom CSS should be used sparingly and with discretion.
+* If you are creating new style rules, you should include comments which AT MINIMUM contain :
+*   intended FILEPATHS (where it is called) and affected PAGES(URLs) where these styles are called
+*   brief explanation of the reason for deviating from the theme
+*
+* If your custom styles differ from the google-doc guide, please explain why in the comments, and
+* include a note on the google doc itself.
+*/
+
 body {
     min-width: 500px;
 }
@@ -20,71 +40,53 @@ h2 {
     padding-bottom:2rem;
 }
 
+*
+* FILEPATHS:
+*		application\libraries\Recaptcha.php
+* PAGES:
+*		gig/admin/login
+*		gig/contact
+*/
 .text-xs-center {
         text-align: center;
 }
 
+*
+* FILEPATHS:
+*		application\libraries\Recaptcha.php
+* PAGES:
+*		gig/admin/login
+*		gig/contact
+*/
 .g-recaptcha {
     display: inline-block;
 }
 
-.navbar-brand {
-    padding: 5px 15px 0 10px;
-}
-
-input#userfile {
-    height: auto;
-}
-
-/*-------FAQ Accordian CSS-------*/
-.FAQ-wrapper {
-	margin: auto;
-	width: 75%;
-}
-
-.half {
-	float: left;
-	width: 100%;
-	padding: 0 1em;
-}
-
-  /* Accordian styles */
-.tab {
-	position: relative;
-	margin-bottom: 1px;
-	width: 100%;
-	color: #fff;
-	overflow: hidden;
-}
-
-/*Hide the checkboxes on the FAQ page*/
-.faq-checkbox {
-	display: none;
-}
-
-.blue label {
-	background: #2980b9;
-    margin-bottom: 0;
-}
-
-.tab-content {
+*
+* FILEPATHS:
+*		application\views\pages\faq.php
+* PAGES:
+*		gig/pages/faq
+*/
+  .tab-content {
 	max-height: 0;
 	overflow: hidden;
-	background: #1abc9c;
 	-webkit-transition: max-height .35s;
 	-o-transition: max-height .35s;
 	transition: max-height .35s;
-}
+  }
 
-.blue .tab-content {
-	background: #3498db;
-    margin-bottom: 1rem;
-}
-
-.tab-content p {
+*
+* FILEPATHS:
+*		application\views\pages\faq.php
+* PAGES:
+*		gig/pages/faq
+*/
+  .tab-content p {
 	margin: 1em;
 	  height: auto;
-}
+  }
+
 
 
 /*-------GIG LIST STYLES-------*/
