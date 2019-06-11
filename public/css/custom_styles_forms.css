@@ -1,110 +1,75 @@
 /**
  * public/css/custom_styles_forms.css
  *
- * css styles for forms
+ * css style for forms
  *
  * @package GigCentral
  * @subpackage Home
- * @author Elizabeth Jones, Craig Peterson <craig.peterson@seattlecentral.edu>
- * @version 1.1 2019/06/03
+ * @author Elizabeth Jones
+ * @version 1.0 2019/5/16
  * @link
  * @license http://www.apache.org/licenses/LICENSE-2.0
  * @see application/view/themes/bootswatch/header.php
  * @todo none
  */
 
-.form-actions {
-    margin: 0;
-    background-color: transparent;
-    text-align: center;
-}
+/*
+* CSS should conform to the standards in the theme. 
+* (As of 2019/06/06, the theme used on the site is "Flatly" from bootswatch.)
+* 
+* Every effort should be made to maintain style consistency.
+* In order to avoid discrepencies, you should NOT make rules by "eye-balling" approximate colors, 
+* size, spacing, media querries, etc.
+* Rather, consult the style guide available at:
+* https://docs.google.com/document/d/19PxRlB8ITMTzURyw9CoRoStEzH7l2cnIPXP0MRPFNaI/edit
+*
+* Custom CSS should be used sparingly and with discretion.
+* If you are creating new style rules, you should include comments which AT MINIMUM contain :
+*   intended FILEPATHS (where it is called) and affected PAGES(URLs) where these styles are called
+*   brief explanation of the reason for deviating from the theme
+*
+* If your custom styles differ from the google-doc guide, please explain why in the comments, and
+* include a note on the google doc itself.
+*/
 
-/* .container .btn - general button styles */
-.btn {
-    background-color: #2c3e50;
-    color: #fff;
-    font-size: 1.5em;
-    border: none;
-}
+  label {
+	position: relative;
+	display: block;
+	padding: 0 2em 0 .5em;
+	background: #16a085;
+	font-weight: bold;
+	line-height: 2.5em;
+	cursor: pointer;
+  }
 
-.btn:hover {
-    background-color: #000;
-}
+  label::after {
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: block;
+	width: 3em;
+	line-height: 3;
+	text-align: center;
+	-webkit-transition: all .35s;
+	-o-transition: all .35s;
+	transition: all .35s;
+  }
 
-/* for when a slightly smaller button is desired */
-.small-btn {
-    font-size: 1.2em;
-    padding: 8px 12px;
-}
+  input[type=checkbox] + label::after {
+	content: "+";
+  }
+  input[type=radio] + label::after {
+	content: "\25BC";
+  }
+  input[type=checkbox]:checked + label::after {
+	transform: rotate(315deg);
+  }
+  input[type=radio]:checked + label::after {
+	transform: rotateX(180deg);
+  }
 
-.form-group + button { /* targets a button that is immediately after a .form-group */
-    margin-top:-10px; /* reduces space between last form field and submit button */
-}
-
-/* aligns text/links that are above/below a form input field
-   with the text in the input field */
-.form-group a {
-    margin-left:15px;
-}
-
-/* styles a custom-info-box that is inside a form */
-form .custom-info-box {
-    margin-top: 30px; /* doubles standard form-group spacing */
-}
-
-.custom-info-box {
-    background: #dee3e4; /* slightly darker than bootswatch flatly "well" class background */
-    border-left:5px solid #18bc9c;
-    padding: 1rem;
-}
-
-/* removes margins on the <h2> inside the .custom-info-box box */
-.custom-info-box h2 {
-    margin:0;
-}
-
-.contact-btn {
-    margin-left: 180px;
-}
-
-label {
-    position: relative;
-    display: block;
-    padding: 0 2em 0 .5em;
-    background: #16a085;
-    font-weight: bold;
-    line-height: 2.5em;
-    cursor: pointer;
-}
-
-label::after {
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: block;
-    width: 3em;
-    line-height: 3;
-    text-align: center;
-    -webkit-transition: all .35s;
-    -o-transition: all .35s;
-    transition: all .35s;
-}
-
-input[type=checkbox] + label::after {
-    content: "+";
-}
-input[type=radio] + label::after {
-    content: "\25BC";
-}
-input[type=checkbox]:checked + label::after {
-    transform: rotate(315deg);
-}
-input[type=radio]:checked + label::after {
-    transform: rotateX(180deg);
-}
-
-input:checked ~ .tab-content {
-    max-height: 15em;
-}
+ input:checked ~ .tab-content {
+	max-height: 15em;
+  }
 
 
