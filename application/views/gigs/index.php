@@ -7,6 +7,7 @@
 * @package ITC 260 Gig Central CodeIgnitor
 * @subpackage Gig Controller
 * @author Patricia Barker <pbarke01@seattlecentral.edu>, Craig Peterson <craig.peterson@seattlecentral.edu>
+* Esmeralda Barajas <smbarajas14@gmail.com>
 * @version 1.1 2019/06/03
 * @link http://www.tcbcommercialproperties.com/sandbox/ci/
 * @license http://www.apache.org/licenses/LICENSE-2.0
@@ -53,9 +54,9 @@
                 <h4>Filter</h4>
                 <div class="form-group">
                     <label>Type of Job:</label>
-                    <select name="GigOutline">
+                    <select name="Name">
                         <?php foreach ($gigs as $gig): ?>
-                        <option value="<?=$gig['GigOutline']?>"><?=$gig['GigOutline']?></option>
+                        <option value="<?=$gig['Name']?>"><?=$gig['Name']?></option>
                         <?php endforeach ?>
                     </select>
                 </div>
