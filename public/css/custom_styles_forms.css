@@ -13,12 +13,6 @@
  * @todo none
  */
 
-.form-actions {
-    margin: 0;
-    background-color: transparent;
-    text-align: center;
-}
-
 /* .container .btn - general button styles */
 .btn {
     background-color: #2c3e50;
@@ -107,4 +101,9 @@ input:checked ~ .tab-content {
     max-height: 15em;
 }
 
-
+/********* styles that don't appear to be used anymore-need second set of eyes *************/
+.form-actions {/*this style doesn't appear to be used on any page*/
+    margin: 0;
+    background-color: transparent;
+    text-align: center;
+}
