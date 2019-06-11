@@ -274,10 +274,10 @@ class Gig extends CI_Controller
     //search with filtering for gigs
         public function filter() {
 
-            $GigOutline = $_POST['GigOutline'];
+            $Name = $_POST['Name'];
             $CompanyCity = $_POST['CompanyCity'];
 
-            $result = $this->gig_model->filter_search($GigOutline, $CompanyCity);
+            $result = $this->gig_model->filter_search($Name, $CompanyCity);
 
             if (!empty($result)){
                 //if we have results, then post them here
